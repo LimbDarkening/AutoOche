@@ -1,0 +1,1 @@
+"""Auto Oche scoring service."""

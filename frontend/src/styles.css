@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root { font-family: Manrope, system-ui, sans-serif; color: #f4f7ed; background: #0a1d18; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; background: radial-gradient(circle at 78% -10%, #315b46 0, transparent 36rem), #0a1d18; }
+button, input { font: inherit; }
+button { cursor: pointer; border: 0; }
+button:disabled { cursor: not-allowed; opacity: .5; }
+.app-shell, .setup-shell { width: min(1100px, calc(100% - 32px)); margin: 0 auto; padding: 24px 0 64px; }
+.topbar, .setup-shell nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.topbar > div { display: flex; gap: 8px; }
+.brand { background: transparent; color: #f4f7ed; font-weight: 800; font-size: 1.05rem; letter-spacing: .1em; padding: 8px 0; }
+.brand span { color: #d8ff5d; }
+.quiet { background: transparent; color: #c5d4c8; padding: 8px 10px; border-radius: 8px; }
+.quiet:hover { background: #1c352b; color: #fff; }
+.eyebrow { margin: 0 0 6px; color: #d8ff5d; font-family: 'DM Mono', monospace; font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; }
+.game-header { margin: 56px 0 28px; max-width: 700px; }
+h1, h2, p { margin-top: 0; }
+h1 { font-size: clamp(2.25rem, 7vw, 4.6rem); letter-spacing: -.07em; line-height: .98; margin-bottom: 13px; }
+h2 { margin-bottom: 0; letter-spacing: -.04em; }
+.notice { color: #b9c8ba; min-height: 1.5em; }
+.scoreboard { display: grid; gap: 14px; margin-bottom: 18px; }
+.players-1 { grid-template-columns: minmax(0, 1fr); }.players-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.player-card { background: #153128; border: 1px solid #29493c; padding: 24px; border-radius: 18px; transition: background .2s, transform .2s; }
+.player-card.active { background: #224b3b; border-color: #d8ff5d; transform: translateY(-3px); }.player-card.winner { background: #425d1b; }
+.player-name { font-size: 1rem; font-weight: 700; color: #d5e1d6; display: flex; justify-content: space-between; }.winner-mark { color: #d8ff5d; font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; }
+.remaining { font-family: 'DM Mono', monospace; font-size: clamp(4.5rem, 12vw, 7rem); font-weight: 500; letter-spacing: -.09em; line-height: 1; margin: 8px 0 18px; }
+.statline { display: flex; flex-wrap: wrap; gap: 10px; color: #a7b9aa; font-size: .78rem; }.statline span + span::before { content: '·'; color: #d8ff5d; margin-right: 10px; }
+.control-grid { display: grid; grid-template-columns: 1.1fr 1.1fr .8fr; gap: 14px; margin: 30px 0 50px; }.control-grid > article, .turns-section, .finish-card { border: 1px solid #29493c; border-radius: 16px; background: #102820; padding: 20px; }
+.voice-panel p:last-child, .checkout-panel p:last-child { color: #a7b9aa; line-height: 1.55; font-size: .85rem; margin: 14px 0 0; }.voice-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }.mic, .always-mic { display: block; width: 100%; padding: 15px; color: #102217; font-weight: 800; border-radius: 10px; }.mic { background: #d8ff5d; }.always-mic { background: #bcd5c2; }.mic.listening, .always-mic.enabled { background: #ffa667; }
+.total-form, .dart-form { display: flex; gap: 8px; }.total-form { margin-bottom: 10px; }.total-form input, .dart-form input { min-width: 0; flex: 1; padding: 11px; border: 1px solid #355448; border-radius: 8px; color: #eff6ee; background: #0b1e18; }.total-form button, .dart-form button, .primary, .finish-card button, .pending button { background: #e6eee0; color: #102217; font-weight: 800; padding: 11px 13px; border-radius: 8px; white-space: nowrap; }.checkout-panel strong { display: block; font-family: 'DM Mono', monospace; color: #d8ff5d; font-size: 1.4rem; margin-top: 15px; }
+.pending { margin-top: 12px; display: grid; gap: 8px; padding: 10px; background: #29483a; border-radius: 8px; font-size: .78rem; }.pending .quiet { text-align: left; padding: 0; }
+.section-title { display: flex; justify-content: space-between; align-items: end; margin-bottom: 12px; }.empty { color: #a7b9aa; margin-bottom: 0; }.turn-list, .history-list { list-style: none; padding: 0; margin: 0; }.turn-list li { display: grid; grid-template-columns: 1.1fr 60px 80px 2fr; gap: 12px; align-items: center; border-top: 1px solid #29493c; padding: 12px 0; font-size: .85rem; }.turn-list strong { color: #d8ff5d; }.turn-list em { color: #a7b9aa; font-style: normal; font-size: .78rem; }.finish-card { margin: 30px 0 48px; text-align: center; padding: 40px; }.finish-card h2 { font-size: 2.2rem; }.finish-card p { color: #b9c8ba; }.danger { color: #ffaaa2; margin-top: 15px; }.history-list li { display: flex; justify-content: space-between; gap: 20px; padding: 16px 0; border-top: 1px solid #29493c; }.history-list div { display: grid; gap: 4px; }.history-list span { color: #a7b9aa; font-size: .82rem; }
+.setup-shell { min-height: 100vh; display: flex; flex-direction: column; }.setup-shell nav { padding-top: 8px; }.setup-card { width: min(650px, 100%); margin: auto 0; padding: 72px 0; }.lead { max-width: 570px; color: #c2d0c4; font-size: 1.15rem; line-height: 1.65; margin-bottom: 34px; }.setup-card form { display: grid; gap: 17px; max-width: 480px; }.setup-card fieldset { border: 0; padding: 0; margin: 0; }.setup-card legend, .setup-card label { display: grid; gap: 7px; color: #c9d5c9; font-size: .85rem; font-weight: 700; }.mode-toggle { display: flex; gap: 8px; margin-top: 8px; }.mode-toggle button { flex: 1; padding: 13px; background: #163128; color: #b9c8ba; border-radius: 9px; font-weight: 700; }.mode-toggle .selected { background: #d8ff5d; color: #102217; }.setup-card input { padding: 13px; background: #102820; border: 1px solid #355448; border-radius: 9px; color: #fff; }.rules { display: flex; gap: 8px; flex-wrap: wrap; }.rules span { font-family: 'DM Mono', monospace; font-size: .75rem; color: #d8ff5d; border: 1px solid #355448; padding: 7px 9px; border-radius: 99px; }.start { margin-top: 7px; font-size: 1rem; }
+@media (max-width: 760px) { .app-shell, .setup-shell { width: min(100% - 24px, 1100px); padding-top: 12px; }.game-header { margin: 40px 0 24px; }.players-2, .control-grid { grid-template-columns: 1fr; }.control-grid { margin-bottom: 35px; }.turn-list li { grid-template-columns: 1fr 48px 64px; }.turn-list em { grid-column: 1 / -1; }.history-list li { display: grid; }.remaining { font-size: 5rem; } }

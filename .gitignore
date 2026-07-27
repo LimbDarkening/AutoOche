@@ -1,0 +1,8 @@
+.pnpm-store/
+.mypy_cache/
+backend/.pytest_cache/
+backend/.venv/
+backend/__pycache__/
+backend/**/__pycache__/
+frontend/node_modules/
+frontend/dist/
